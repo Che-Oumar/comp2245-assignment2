@@ -1,0 +1,157 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 18px;
+  color: #2D3748;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+/* for Grid */
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+  background-color: #63B3ED;
+  color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+header h1 {
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+}
+
+main {
+  grid-area: main;
+}
+
+article {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+article h2 {
+  font-size: 32px;
+  color: #48BB78;
+  margin-bottom: 5px;
+}
+
+.post-meta {
+  color: #718096;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post-image {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.post-image.left {
+  float: left;
+  margin-right: 15px;
+}
+
+.post-image.right {
+  float: right;
+  margin-left: 15px;
+}
+
+/* Sidebar */
+aside {
+  grid-area: aside;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+aside section {
+  margin-bottom: 20px;
+}
+
+aside h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+}
+
+/* About section*/
+aside section:first-of-type {
+  background-color: #E2E8F0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+aside section:first-of-type h3 {
+  color: #000000;
+}
+
+/* categories styling */
+aside section:nth-of-type(2) h3,
+aside section:nth-of-type(3) h3 {
+  color: #48BB78;
+}
+
+/* Sidebar  */
+aside ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+aside li {
+  margin-bottom: 8px;
+}
+
+aside a {
+  color: #4299E1;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 10px;
+  background-color: #2C5282; 
+  color: #FFFFFF;            
+  border-radius: 10px;
+}
